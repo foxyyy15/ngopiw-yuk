@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ngopiw Yuk</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Ngopiw Yuk</div>
+    <div id="navLinks">
+      <a href="#tentang">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#kontak">Kontak</a>
+      <a href="javascript:void(0)" onclick="openLogin()">Membership</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="overlay"></div>
+
+    <div class="hero-content glass">
+      <h1>Ngopiw Yuk</h1>
+      <p class="tagline">Nongki tiap hari, seperti dirumah sendiri.</p>
+
+      <button class="btn-primary" onclick="openLogin()">
+        Join Membership
+      </button>
+    </div>
+  </header>
+
+  <section id="tentang">
+    <h2>Tentang Kami</h2>
+    <p>
+      Ngopiw Yuk adalah tempat nongkrong penuh cerita. Di sini, kopi diracik dengan hati, disajikan hangat bersama obrolan ringan dan tawa yang akrab. 
+      Datang, duduk, nikmati — karena setiap cangkir punya rasa yang bikin rindu balik lagi.
+    </p>
+  </section>
+
+  <section id="menu">
+    <h2>Menu Kami</h2>
+
+    <div class="menu-grid">
+      <div class="card">
+        <h3>Espresso</h3>
+        <p>Rp 15.000</p>
+      </div>
+
+      <div class="card">
+        <h3>Latte</h3>
+        <p>Rp 23.000</p>
+      </div>
+
+      <div class="card">
+        <h3>Kopi Susu Gula Aren</h3>
+        <p>Rp 20.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="contact">
+    <h2>Kontak & Lokasi</h2>
+    <p>Alamat: Jl. Raya Serang - Banten</p>
+    <p>WA: 0812-3456-7890 (CHAT ONLY)</p>
+    <p>Buka: 09.00–22.00</p>
+  </section>
+
+  <footer>
+    © 2025 Ngopiw Yuk
+  </footer>
+
+
+  <!-- ================= LOGIN MODAL ================= -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLogin()">&times;</span>
+      <h2>Login Membership</h2>
+
+      <label>Email</label>
+      <input type="text" id="loginEmail" placeholder="Masukkan email">
+      <p id="loginEmailErr" class="error-text"></p>
+
+      <label>Password</label>
+      <input type="password" id="loginPassword" placeholder="Masukkan password">
+      <p id="loginPassErr" class="error-text"></p>
+
+      <button class="btn-primary" onclick="login()">Masuk</button>
+
+      <p style="margin-top:10px;">
+        Belum punya akun?
+        <a href="javascript:void(0)" onclick="openRegister()">Daftar di sini</a>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ================= REGISTER MODAL ================= -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRegister()">&times;</span>
+      <h2>Daftar Membership</h2>
+
+      <label>Nama</label>
+      <input type="text" id="regName" placeholder="Masukkan nama lengkap">
+      <p id="regNameErr" class="error-text"></p>
+
+      <label>Email</label>
+      <input type="text" id="regEmail" placeholder="Masukkan email">
+      <p id="regEmailErr" class="error-text"></p>
+
+      <label>Password</label>
+      <input type="password" id="regPassword" placeholder="Masukkan password">
+      <p id="regPassErr" class="error-text"></p>
+
+      <button class="btn-primary" onclick="register()">Daftar</button>
+
+      <p style="margin-top:10px;">
+        Sudah punya akun?
+        <a href="javascript:void(0)" onclick="switchToLogin()">Login di sini</a>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
